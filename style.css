@@ -1,0 +1,52 @@
+:root {
+  --bg: #fbfaf7;
+  --ink: #1c1b19;
+  --muted: #6b6860;
+  --line: #e6e2d9;
+  --accent: #2f5d50;
+  --card: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+a { color: var(--accent); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.top { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; padding-bottom: 28px; }
+.logo { font-weight: 700; font-size: 20px; letter-spacing: .02em; color: var(--ink); text-decoration: none; }
+nav a { margin-left: 22px; color: var(--muted); text-decoration: none; font-size: 15px; }
+nav a:hover { color: var(--ink); }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+.hero { border-top: 0; padding: 64px 20px 72px; }
+.eyebrow { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; margin: 0 0 12px; }
+h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; margin: 0 0 20px; letter-spacing: -.01em; }
+h2 { font-size: 22px; margin: 0 0 14px; }
+h3 { font-size: 20px; margin: 0 0 6px; }
+.lede { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
+.muted { color: var(--muted); font-size: 15px; }
+
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.grid p { margin: 0; color: var(--muted); }
+.contact p { margin: 0 0 8px; }
+.mail { font-size: 20px; font-weight: 600; text-decoration: none; }
+
+.prose { padding-top: 24px; padding-bottom: 48px; max-width: 720px; }
+.prose h1 { font-size: 36px; margin-bottom: 4px; }
+.prose h2 { margin-top: 32px; font-size: 19px; }
+.prose ul { padding-left: 20px; }
+.prose li { margin-bottom: 6px; }
+
+.foot { display: flex; justify-content: space-between; padding-top: 24px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.foot a { color: var(--muted); }
+
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; gap: 28px; }
+  nav a { margin-left: 14px; }
+  .foot { flex-direction: column; gap: 8px; }
+}
